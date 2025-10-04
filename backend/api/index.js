@@ -77,13 +77,9 @@ app.get("/api/products", async (req, res) => {
 });
 
 // --- Server Başlatma ---
-if (process.env.NODE_ENV !== "production") {
-  const LOCAL_PORT = 5001;
-  app.listen(LOCAL_PORT, () => {
-    console.log(
-      `[SERVER] Backend API yerelde çalışıyor: http://localhost:${LOCAL_PORT}`
-    );
-  });
-}
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+  console.log(`[SERVER] Backend API çalışıyor: http://localhost:${PORT}`);
+});
 
 module.exports = app;
