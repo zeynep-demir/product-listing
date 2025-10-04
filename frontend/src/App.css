@@ -1,0 +1,158 @@
+/* BAŞLIK STİLİ: Avenir Book 45 */
+.main-title {
+  font-family: "Avenir";
+  font-weight: 400;
+  font-size: 45px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.product-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 8px 0 4px 0;
+}
+
+.product-price {
+  font-size: 15px;
+  font-weight: 400;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.product-color-name {
+  font-family: "Avenir";
+  font-weight: 400;
+  font-size: 12px;
+  color: #777;
+  margin: 5px 0 0 0;
+}
+
+/* Puanlama Stilleri */
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+.stars-container {
+  color: #ffc107;
+  font-size: 1.1rem;
+}
+.star {
+  margin-right: -2px;
+}
+.star.empty {
+  color: #ccc;
+}
+.rating-text {
+  font-family: "Avenir";
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+
+/* Ana konteyner */
+.product-list-container {
+  position: relative;
+  width: 80%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px 50px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.product-carousel {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  user-select: none;
+}
+.product-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ürün Kartı Stilleri */
+.product-card {
+  width: 25%;
+  min-width: 200px;
+  max-width: 200px;
+  margin-right: 40px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.product-details {
+  padding: 10px 0;
+  text-align: left;
+}
+
+.product-image-container {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  background-color: #f8f8f8;
+}
+
+.product-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Nav. */
+.nav-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #333;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 0.2s;
+  outline: none;
+  padding: 10px 15px;
+}
+.nav-arrow:hover {
+  opacity: 0.7;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .product-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-title {
+    font-size: 30px;
+  }
+
+  .product-card {
+    width: 50vw;
+  }
+}
