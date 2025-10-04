@@ -1,6 +1,6 @@
 # Responsive Ürün Listeleme (Product Listing)
 
-Bu proje, modern bir e-ticaret sitesi için tasarlanmış, tam responsive (akışkan) özellikli ve performansa odaklanmış bir ürün listeleme uygulamasıdır. Uygulama, birbirinden bağımsız çalışan bir **React Frontend** ve bir **Node.js/Express Backend API** olmak üzere iki ana bileşenden oluşur (Microservices/Monorepo yapısı).
+Bu proje, modern bir e-ticaret sitesi için tasarlanmış, tam responsive özellikli ve performansa odaklanmış bir ürün listeleme uygulamasıdır. Uygulama, birbirinden bağımsız çalışan bir **React Frontend** ve bir **Node.js/Express Backend API** olmak üzere iki ana bileşenden oluşur.
 
 ## Proje Canlı Bağlantıları (Deployment)
 
