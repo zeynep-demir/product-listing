@@ -115,7 +115,7 @@ const App = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/api/products");
+        const response = await axios.get("process.env.REACT_APP_API_URL");
 
         if (Array.isArray(response.data)) {
           setProducts(response.data);
@@ -124,9 +124,7 @@ const App = () => {
           setProducts([]);
         }
       } catch (err) {
-        setError(
-          `API bağlantı hatası. Lütfen Backend sunucusunun (http://localhost:5001) çalıştığından emin olun.`
-        );
+        setError(`API bağlantı hatası.`);
         setProducts([]);
       } finally {
         setLoading(false);
