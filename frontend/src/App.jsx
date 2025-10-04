@@ -115,7 +115,9 @@ const App = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("process.env.REACT_APP_API_URL");
+        const response = await axios.get(
+          `${import.meta.env.VITE_BACKEND_URL}/api/products`
+        );
 
         if (Array.isArray(response.data)) {
           setProducts(response.data);
